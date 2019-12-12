@@ -164,7 +164,7 @@ def print_with_xrefs(r2_results,result_type,r2p):
         if xrefs:
             for xref in xrefs.split("\n"):
                 output = xref.lstrip()[1:].lstrip()
-                if(output[0] == ';'):
+                if(len(output) > 0 and output[0] == ';'):
                      output = output[2:]
                 print(" -> " + output)
 
